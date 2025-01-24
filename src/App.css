@@ -1,0 +1,172 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #e6e6e6aa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+body {
+  background-color: #121212; 
+  color: #E0E0E0;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.form-horizontal {
+  display: flex;
+  flex-direction: column; 
+  gap: 15px; 
+  padding: 0; 
+  margin: 0; 
+}
+
+form {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 40px 30px;
+ 
+  border-radius: 10px;
+ 
+}
+form .form-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  margin-bottom: 20px;
+}
+form .form-item-full {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  margin-bottom: 20px;
+}
+
+
+form .form-item label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+  color: #FFFFFF;
+ 
+}
+
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #333333;
+  border-radius: 5px;
+ 
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #47414f; /* Violet pour accent */
+  
+}
+
+
+.flex.flex-col.space-y-2 div {
+  display: flex;
+  align-items: center;
+}
+
+.flex.flex-col.space-y-2 div label {
+  margin-left: 8px;
+  font-size: 14px;
+  color: #E0E0E0;
+}
+
+/* Bouton Soumettre */
+button[type="submit"],button[type="save"] {
+  width: 100%;
+  background-color: #333136; 
+  color: #FFFFFF;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
+
+.form-item .form-message {
+  color: #FF5252; 
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+
+.form-item.error input,
+.form-item.error textarea {
+  border-color: #FF5252;
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+
+@media (max-width: 768px) {
+  form {
+    padding: 15px;
+  }
+
+  button[type="submit" ], button[type="save"], {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+
+
